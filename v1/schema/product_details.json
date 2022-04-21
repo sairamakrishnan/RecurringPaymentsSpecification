@@ -1,0 +1,36 @@
+{
+   "type":"object",
+   "description":"to capture product details",
+   "properties":{
+      "id":{
+         "type":"string",
+         "description":"Unique id to identify a product",
+         "minLength":1,
+         "maxLength":30
+      },
+      "name":{
+         "type":"string",
+         "description":"name of the product",
+         "minLength":1,
+         "maxLength":128
+      },
+      "status":{
+         "type":"string",
+         "description":"Status of the product"
+      },
+       "description":{
+         "type":"string",
+         "description":"Description of the product"
+      },
+      "create_date":{
+         "type":"string",
+         "format":"date"
+         "description":"Date of product creation"
+      },
+   "required":[
+      "id",
+      "name",
+      "status",
+      "create_date"
+   ]
+}
