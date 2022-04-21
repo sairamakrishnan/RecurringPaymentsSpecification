@@ -1,0 +1,51 @@
+{
+   "type":"object",
+   "description":"to capture product details",
+   "properties":{
+      "id":{
+         "type":"string",
+         "description":"Unique id to identify a plan",
+         "minLength":1,
+         "maxLength":30
+      },
+     "product_id":{
+         "type":"string",
+         "description":"Unique id to identify a product",
+         "minLength":1,
+         "maxLength":30
+      },     
+      "name":{
+         "type":"string",
+         "description":"name of the plan",
+         "minLength":1,
+         "maxLength":128
+      },
+      "status":{
+         "type":"string",
+         "description":"Status of the plan"
+      },
+       "description":{
+         "type":"string",
+         "description":"Description of the plan"
+      },
+      "create_date":{
+         "type":"string",
+         "format":"date"
+         "description":"Date of product creation"
+      },
+      "billing_cycle":{
+         "$ref": "./billing_cycle.json",
+         "description": "billing cycle for the plan"
+      },
+      "taxes":{
+         "$ref": "./taxes.json",
+         "description": "billing cycle for the plan"
+      }
+   "required":[
+      "id",
+      "product_id",
+      "name",
+      "billing_cycle",
+      "create_date"
+   ]
+}
