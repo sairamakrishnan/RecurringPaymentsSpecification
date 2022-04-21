@@ -1,0 +1,40 @@
+{
+   "type":"object",
+   "description":"to capture product details",
+   "properties":{
+      "subscriber_id":{
+         "type":"string",
+         "description":"Unique id to identify a subscriber",
+         "minLength":1,
+         "maxLength":30
+      },
+     "plan_id":{
+         "type":"string",
+         "description":"Unique id to identify a product",
+         "minLength":1,
+         "maxLength":30
+      },           
+      "status":{
+         "type":"string",
+         "description":"Status of the subscription"
+      },
+       "auto_renewal":{
+         "type":"boolean",
+         "description":"TRUE OR FALSE"
+      },
+      "create_date":{
+         "type":"string",
+         "format":"date"
+         "description":"Date of product creation"
+      },
+       "period":{
+         "type":"integer",
+         "description":"number of subscription"
+      },
+   "required":[
+      "subscriber_id",
+      "plan_id",
+      "status",
+      "create_date"
+   ]
+}
